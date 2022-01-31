@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, Depends, WebSocket, WebSocketDisconnect, Response, Request
 from fastapi_users import FastAPIUsers
 from fastapi_users.authentication import CookieTransport, AuthenticationBackend
@@ -11,6 +12,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+import uvicorn
 
 cookie_transport = CookieTransport(cookie_max_age=3600, cookie_secure=False)
 
@@ -93,3 +95,7 @@ async def feed(websocket: WebSocket):
 		manager.disconnect(websocket, user)
 		response["message"] = "Disconnected"
 		await manager.broadcast(response)
+
+
+if __name__ == "__main__":
+	uvicorn.run(app, port=int(os.environ.get('PORT', 5000)))

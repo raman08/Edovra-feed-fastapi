@@ -1,1 +1,1 @@
-app: gunicorn -w 4 -k ers.UvicornWorkei app:app
+app: python app.py

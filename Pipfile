@@ -8,6 +8,7 @@ fastapi-users = {extras = ["mongodb"], version = "*"}
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 jinja2 = "*"
+gunicorn = "*"
 
 [dev-packages]
 

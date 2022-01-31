@@ -1,1 +1,1 @@
-web:unicorn app:app --port $PORT
+app: gunicorn -w 4 -k ers.UvicornWorkei app:app

@@ -1,0 +1,1 @@
+app: uvicorn app:app

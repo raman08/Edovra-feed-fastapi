@@ -1,0 +1,49 @@
+body {
+	background-color: #0e07077c;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	width: 75%;
+	height: 80%;
+	align-content: center;
+}
+
+.chat-body {
+	align-self: center;
+}
+
+.card-heading {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+#chat-form {
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+	width: 90%;
+}
+
+#messages {
+	padding-left: 20px;
+	padding-top: 20px;
+	max-height: 80%;
+	overflow: auto;
+}
+
+.feed {
+	margin: 20px;
+	border-bottom: 1px solid black;
+	padding: 10px;
+	padding-bottom: 5px;
+}
+
+.feed-user {
+	padding-right: 5px;
+}

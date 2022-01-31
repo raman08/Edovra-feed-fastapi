@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Edvora Feed Application</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/static/js/feed.js"></script>
+
+	<link rel="stylesheet" href="/static/css/feed.css">
+</head>
+
+<body>
+	<div class="chat-body card">
+		<div class="card-body">
+			<div class="card-heading">
+				<h2>
+					<strong id="profile"></strong>
+				</h2>
+			</div>
+			<hr>
+			<div id="messages">
+				<p class="feed">
+					<strong class="feed-user">Ramna</strong>
+					<span class="feed-message">This is my message</span>
+				</p>
+			</div>
+			<form class="form-inline" id="chat-form">
+				<input type="text" class="form-control" placeholder="Write your message">
+				<button id="send" type="submit" class="btn btn-primary">Send</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

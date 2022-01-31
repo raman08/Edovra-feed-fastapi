@@ -47,3 +47,7 @@ body {
 .feed-user {
 	padding-right: 5px;
 }
+
+.logout-button {
+	margin-left: 2%;
+}

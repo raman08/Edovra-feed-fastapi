@@ -57,4 +57,21 @@ $(document).ready(function () {
 			$('input').val('');
 		}
 	});
+
+	$('.logout-button').click(function () {
+		fetch('/api/auth/logout', { method: 'POST' })
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(response.statusText);
+				}
+
+				return response.json();
+			})
+			.then(response => {
+				console.log('Logout Successfull ............');
+				alert('Logout Success');
+				window.location.href = '/';
+			})
+			.catch(err => console.log(err));
+	});
 });

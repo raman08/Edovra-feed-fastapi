@@ -27,7 +27,7 @@ $(document).ready(function () {
 			window.location.href = '/';
 		});
 
-	var ws = new WebSocket('ws://localhost:8000/ws/feed');
+	var ws = new WebSocket(`ws://${window.location.host}/ws/feed`);
 	ws.onmessage = function (event) {
 		console.log(`Web Socket: ${document.cookie}`);
 		var parent = $('#messages');
